@@ -1,20 +1,134 @@
-#root {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
+
+body {
+  background-color: rgb(46, 44, 44);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 10px;
+}
+
+#cardContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+
+header {
+  background: linear-gradient(
+    to right,
+    rgb(204, 224, 224) 0%,
+    rgb(36, 39, 43) 100%
+  );
+  text-align: center;
+  background-color: #eaf2f5;
+  margin-bottom: 20px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  /* font-family: "Ultra", sans-serif; */
+  font-family: "Share Tech Mono", monospace;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-shadow: 0 4px rgb(187, 184, 184), 0 5px rgb(77, 76, 76);
+}
+
+.card {
+  padding: 10px;
+  background-color: #eaf2f5;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+}
+.card p {
+  text-align: justify;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #4e5353;
+  border: solid gray;
+  margin-bottom: 5px;
+}
+
+.episodeCardHeader {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #4e5353;
+  border: solid gray;
+  margin-bottom: 5px;
+  color: azure;
+}
+
+h3 a {
+  text-decoration: none;
+  color: rgb(62, 214, 214);
+}
+
+h3 a:hover {
+  color: rgba(249, 105, 14, 1);
+}
+
+img {
+  width: 100%;
+}
+
+#searchEpisodes {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
-#card {
-  padding: 20px;
-  background-color: lightblue;
+#numOfDisplay {
+  margin-top: 10px;
+  color: white;
 }
 
-#cardHeader {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: cyan;
-}
-
-#image {
+.search-episodes,
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
   width: 100%;
+  max-width: 100%; /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin: 0;
+  border: 2px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(233, 231, 231);
+}
+
+@media (min-width: 680px) {
+  #cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 980px) {
+  #cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    margin: 10px 50px;
+  }
+}
+
+@media (min-width: 680px) {
+  #searchEpisodes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 980px) {
+  #searchEpisodes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
